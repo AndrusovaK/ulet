@@ -35,6 +35,7 @@ const replace = require('gulp-replace');
 const ghPages = require('gulp-gh-pages');
 const size = require('gulp-size');
 const fs = require('fs');
+const csscomb = require('gulp-csscomb');
 
 
 // Запуск `NODE_ENV=production npm start [задача]` приведет к сборке без sourcemaps
@@ -82,6 +83,7 @@ gulp.task('less', function () {
         }),
     ]))
     .pipe(gulpIf(!isDev, cleanss()))
+    .pipe(csscomb())
     .pipe(rename('style.min.css'))
     .pipe(debug({title: "RENAME:"}))
     .pipe(gulpIf(isDev, sourcemaps.write('/')))
