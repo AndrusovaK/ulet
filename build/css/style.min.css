@@ -6,6 +6,27 @@
 /* stylelint-enable  block-opening-brace-newline-after */
 /* stylelint-enable  block-closing-brace-newline-before */
 /* stylelint-enable  at-rule-empty-line-before */
+@font-face {
+    font-weight : 400;
+    font-style : normal;
+
+    font-family : "Electra";
+    src : url("../fonts/elektratext-webfont.woff2") format("woff2"), url("../fonts/elektratext-webfont.woff") format("woff"), url("../fonts/elektratext-webfont.ttf") format("truetype");
+}
+@font-face {
+    font-weight : 700;
+    font-style : normal;
+
+    font-family : "Electra";
+    src : url("../fonts/elektratextbold-webfont.woff2") format("woff2"), url("../fonts/elektratextbold-webfont.woff") format("woff"), url("../fonts/elektratextbold-webfont.ttf") format("truetype");
+}
+@font-face {
+    font-weight : 400;
+    font-style : normal;
+
+    font-family : "AMG Anahit";
+    src : url("../fonts/amganahitsemiserif.woff2") format("woff2"), url("../fonts/amganahitsemiserif.woff") format("woff"), url("../fonts/amganahitsemiserif.ttf") format("truetype");
+}
 @at-root {
     @-ms-viewport {
         /* stylelint-disable-line  at-rule-no-vendor-prefix */
@@ -43,21 +64,21 @@ body {
 
     font-size : 1.6rem;
     line-height : 1.375;
-    color : #1c1c1c;
+    color : #343e5c;
 
-    background-color : #fff;
+    background : #fff url(../img/bg-body.jpg) no-repeat 50% 50%;
+    background-size : cover;
 
-    font-family : -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family : "Electra", "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 }
 a {
-    color : #0275d8;
+    color : #343e5c;
     text-decoration : none;
 
     background-color : transparent;
 }
 a:hover, a:focus {
-    color : #014c8c;
-    text-decoration : underline;
+    color : #181d2b;
 }
 img {
     max-width : 100%;
@@ -88,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height : 1.4;
     color : currentColor;
 
-    font-family : -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family : "AMG Anahit";
 }
 h1, h2, h3 {
     margin-top : 1.375em;
@@ -171,18 +192,18 @@ code, kbd, pre, samp {
 code {
     padding : .06em .3em;
 
-    color : #1c1c1c;
+    color : #343e5c;
 
     background-color : #eceeef;
-    border-radius : .3rem;
+    border-radius : .4rem;
 }
 kbd {
     padding : .06em .3em;
 
-    color : #1c1c1c;
+    color : #343e5c;
 
     background-color : #eceeef;
-    border-radius : .3rem;
+    border-radius : .4rem;
 }
 kbd kbd {
     padding : 0;
@@ -199,11 +220,11 @@ pre {
 
     background-color : #f7f7f9;
     border : 1px solid #eceeef;
-    border-radius : .3rem;
+    border-radius : .4rem;
 }
 .container {
     display : block;
-    width : 100%;
+    width : 1170px;
     margin-right : auto;
     margin-left : auto;
     padding-right : 1.5rem;
@@ -374,6 +395,253 @@ pre {
     padding-right : 1.5rem;
     padding-left : 1.5rem;
 }
+.btn {
+    display : inline-block;
+    height : 43px;
+    padding : 0 1.438em;
+
+    font-size : 1.6rem;
+    line-height : 43px;
+    vertical-align : middle;
+    text-align : center;
+    color : #fff;
+    text-decoration : none;
+    white-space : nowrap;
+
+    background-color : #ff8600;
+    border : none;
+    border-radius : 4px;
+    outline : none;
+    cursor : pointer;
+
+    transition : all .3s;
+
+    -webkit-user-select : none;
+       -moz-user-select : none;
+        -ms-user-select : none;
+            user-select : none;
+}
+.btn:hover {
+    color : #fff;
+
+    background : #f07e00;
+}
+.btn:active {
+    color : #fff;
+
+    background : #f07e00;
+}
+.btn:disabled {
+    background : #ffa445;
+}
+.page-header {
+    position : relative;
+
+    display : block;
+    width : 1170px;
+    margin-right : auto;
+    margin-left : auto;
+    padding-right : 1.5rem;
+    padding-left : 1.5rem;
+}
+.page-header__info {
+    display : -ms-flexbox;
+    display : flex;
+        flex-wrap : wrap;
+    margin-right : -1.5rem;
+    margin-bottom : 13px;
+    margin-left : -1.5rem;
+    padding-top : 33px;
+
+    color : #3a405b;
+
+    -ms-flex-wrap : wrap;
+}
+.page-header__info > * {
+    display : block;
+    width : 100%;
+}
+.page-header__info > * {
+    padding-right : 1.5rem;
+    padding-left : 1.5rem;
+}
+.page-header__info > * {
+    display : block;
+    width : 100%;
+}
+.page-header__info > * {
+    padding-right : 1.5rem;
+    padding-left : 1.5rem;
+}
+.page-header__gift {
+    display : block;
+    -ms-flex : 0 0 50%;
+        flex : 0 0 50%;
+    max-width : 50%;
+    padding-right : 1.5rem;
+    padding-left : 1.5rem;
+}
+.page-header__contacts {
+    display : block;
+    -ms-flex : 0 0 50%;
+        flex : 0 0 50%;
+    max-width : 50%;
+    padding-right : 1.5rem;
+    padding-left : 1.5rem;
+
+    text-align : right;
+}
+.page-header__phone {
+    display : inline-block;
+    margin-right : 52px;
+
+    font-weight : 700;
+}
+.page-header__nav {
+    margin-bottom : 30px;
+}
+.page-header__nav-list {
+    margin : 0;
+    padding : 0;
+
+    list-style : none;
+}
+.page-header__nav-list::before, .page-header__nav-list::after {
+    content : "";
+
+    display : table;
+}
+.page-header__nav-list::after {
+    clear : both;
+}
+.page-header__nav-item {
+    position : relative;
+
+    float : left;
+}
+.page-header__nav-item:nth-of-type(3) {
+    margin-right : 342px;
+}
+.page-header__nav-item:nth-of-type(3n+1) .page-header__nav-link {
+    border-radius : 4px 0 0 4px;
+}
+.page-header__nav-item:nth-of-type(3n) .page-header__nav-link {
+    border-right : none;
+    border-radius : 0 4px 4px 0;
+}
+.page-header__nav-item:hover .page-header__nav-link {
+    color : #fff;
+
+    background : #ff8600;
+    border-right-color : #ff8600;
+    border-bottom-color : #f07100;
+}
+.page-header__nav-item:hover .nested-nav {
+    margin-top : 0;
+
+    visibility : visible;
+    opacity : 1;
+}
+.page-header__nav-link {
+    display : block;
+    width : 133px;
+    height : 63px;
+
+    line-height : 63px;
+    text-align : center;
+    color : #00b6c6;
+    text-decoration : none;
+
+    background : #fff;
+    border-right : 1px solid #ededf1;
+    border-bottom : 3px solid #e2e3e7;
+
+    transition : all .3s;
+}
+.page-header .nested-nav {
+    position : absolute;
+    top : 63px;
+    left : 0;
+
+    margin-top : 10px;
+    padding : 18px 0 0 0;
+
+    list-style : none;
+
+    border-radius : 4px;
+    visibility : hidden;
+    opacity : 0;
+
+    transition : all .2s;
+}
+.page-header .nested-nav:before {
+    content : "";
+    position : absolute;
+    top : 13px;
+    left : 40px;
+
+    width : 10px;
+    height : 10px;
+
+    background : #ff8600;
+    transform : rotate(-45deg);
+}
+.page-header .nested-nav__item {
+    overflow : hidden;
+
+    border-bottom : 1px solid #d57007;
+}
+.page-header .nested-nav__item:first-child {
+    border-radius : 4px 4px 0 0;
+}
+.page-header .nested-nav__item:last-child {
+    border : none;
+    border-radius : 0 0 4px 4px;
+}
+.page-header .nested-nav__link {
+    position : relative;
+
+    display : block;
+    height : 72px;
+    padding : 0 20px 0 67px;
+
+    line-height : 72px;
+    color : #fff;
+    text-decoration : none;
+    white-space : nowrap;
+
+    background : #ff8600;
+
+    transition : all .3s;
+}
+.page-header .nested-nav__link:hover {
+    background : #f07e00;
+}
+.page-header .nested-nav__link-icon {
+    position : absolute;
+    top : 0;
+    bottom : 0;
+    left : 20px;
+
+    max-width : 34px;
+    height : 40px;
+    margin : auto;
+
+    vertical-align : middle;
+}
+.page-header__logo {
+    position : absolute;
+    right : 0;
+    bottom : -17px;
+    left : 0;
+
+    width : 285px;
+    height : 122px;
+    margin : 0 auto;
+}
+.page-header__logo img {
+    max-width : 100%;
+}
 @media (min-width: 480px) {
     html {
         font-size : 10px;
@@ -386,9 +654,6 @@ pre {
         padding : 0 0 0 1.8em;
 
         border-left-width : 5px;
-    }
-    .container {
-        width : 100%;
     }
     .col-sm-1 {
         display : block;
@@ -500,9 +765,6 @@ pre {
     }
 }
 @media (min-width: 768px) {
-    .container {
-        width : 100%;
-    }
     .col-md-1 {
         display : block;
         -ms-flex : 0 0 8.33333333%;
@@ -613,9 +875,6 @@ pre {
     }
 }
 @media (min-width: 992px) {
-    .container {
-        width : 962px;
-    }
     .col-lg-1 {
         display : block;
         -ms-flex : 0 0 8.33333333%;
@@ -726,9 +985,6 @@ pre {
     }
 }
 @media (min-width: 1200px) {
-    .container {
-        width : 1170px;
-    }
     .col-xl-1 {
         display : block;
         -ms-flex : 0 0 8.33333333%;
@@ -836,11 +1092,6 @@ pre {
     }
     .col-xl-offset-12 {
         margin-left : 100%;
-    }
-}
-@media (min-width: 1800px) {
-    .container {
-        width : 1770px;
     }
 }
 @media print {

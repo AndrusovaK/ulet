@@ -1,6 +1,6 @@
 'use strict';
 
-const StartPage = "styleguide";
+const StartPage = "index";
 
 // Получение настроек папок из package.json
 const pjson = require('./package.json');
