@@ -562,6 +562,7 @@ pre {
     position : absolute;
     top : 63px;
     left : 0;
+    z-index : 10;
 
     margin-top : 10px;
     padding : 18px 0 0 0;
@@ -670,7 +671,7 @@ pre {
     position : absolute;
     top : 0;
     bottom : 0;
-    z-index : 200;
+    z-index : 5;
 
     box-sizing : border-box;
     width : 25px;
