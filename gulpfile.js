@@ -1,6 +1,6 @@
 'use strict';
 
-const StartPage = "styleguide";
+const StartPage = "index";
 
 // Получение настроек папок из package.json
 const pjson = require('./package.json');
@@ -395,16 +395,20 @@ function getComponentsFiles() {
   }
 
   // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
-  // if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
-  //   сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
-  // }
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
+     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
+  }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
-  // if(fileExistAndHasContent(dirs.source + '/js/file_name.js')) {
+  if(fileExistAndHasContent(dirs.source + '/js/jquery-migrate-1.2.1.min.js')) {
   //   сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
   //   или
-  //   сomponentsFilesList.js.push(dirs.source + '/js/file_name.js'); // добавляем в конец
-  // }
+     сomponentsFilesList.js.push(dirs.source + '/js/jquery-migrate-1.2.1.min.js'); // добавляем в конец
+  }
+
+  if(fileExistAndHasContent(dirs.source + '/js/slick.js')) {
+    сomponentsFilesList.js.push(dirs.source + '/js/slick.js'); // добавляем в конец
+  }
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/css/global-css.css')) {
@@ -412,9 +416,13 @@ function getComponentsFiles() {
   }
 
   // Если хочется иметь в папке сборки какие-то еще отдельные CSS-файлы, пишите их здесь
-  // if(fileExistAndHasContent(dirs.source + '/css/file_name.css')) {
-  //   сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/file_name.css');
-  // }
+  if(fileExistAndHasContent(dirs.source + '/css/slick.css')) {
+     сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/slick.css');
+  }
+
+  if(fileExistAndHasContent(dirs.source + '/css/slick-theme.css')) {
+     сomponentsFilesList.additionalCss.push(dirs.source + '/css/slick-theme.css');
+  }
 
   // Добавим глобальные изображения
   сomponentsFilesList.img.unshift(dirs.source + '/img/*.{jpg,jpeg,gif,png,svg}');

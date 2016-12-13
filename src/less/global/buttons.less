@@ -1,0 +1,38 @@
+//------------------------------------------------------------------------------
+//  Общие стиля любой кнопки
+//------------------------------------------------------------------------------
+
+
+.btn {
+  display: inline-block;
+  height: 43px;
+  line-height: 43px;
+  padding: @btn-padding;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  font-size: @font-size;
+  background-color: @color-main;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s;
+
+  &:hover {
+    background: darken(@color-main, 3%);
+    color: #ffffff;
+  }
+
+  &:active {
+    background: darken(@color-main, 3%);
+    color: #ffffff;
+  }
+}
+
+.btn:disabled {
+  background: @color-main--hover;
+}
