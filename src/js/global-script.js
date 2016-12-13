@@ -39,3 +39,26 @@ function ready(fn) {
 // $( document ).ready(function() {
 
 // });
+
+var a = [
+  {
+    "code": "101",
+    "title": "Шарик фольгизированный",
+    "label": {
+      "type": "sale",
+      "name": "Акция"
+    },
+    "price": "1299",
+    "imageLink": ""
+  },
+  {
+    "code": "102",
+    "title": "Фольгированные шары \"Звезда\"",
+    "label": {
+      "type": "sale",
+      "name": "Акция"
+    },
+    "price": "1299",
+    "imageLink": ""
+  }
+];

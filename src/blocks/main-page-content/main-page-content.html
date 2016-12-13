@@ -1,0 +1,24 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/main-page-content/main-page-content.html')
+
+-->
+<div class="main-page-content">
+	<div class="main-page-content__inner">
+		@@include('../product-card/product-card.html', {
+		"code": "101",
+		"title": "Шарик фольгизированный",
+		"label": {
+		"type": "sale",
+		"name": "Акция"
+		},
+		"price": "1299",
+		"imageLink": "16-theme-different-image.jpg"
+		})
+	</div>
+	<div class="main-page-content__inner"></div>
+	<div class="main-page-content__inner">
+	</div>
+</div>
