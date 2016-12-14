@@ -1,0 +1,143 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/product-card/product-card.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+.product-card__wrapper {
+	.make-col(3);
+}
+
+.product-card {
+	height: 480px;
+	padding: 10px 27px 30px;
+	background: #ffffff;
+	border-radius: 5px;
+
+	&__code {
+		color: @text-color--muted;
+		height: 20px;
+		line-height: 23px;
+	}
+
+	.offer-label {
+		float: right;
+		margin-right: 0;
+		font-size: 16px;
+	}
+
+	&__image {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		height: 210px;
+		text-align: center;
+		vertical-align: middle;
+
+		img {
+			max-height: 100%;
+		}
+	}
+
+	&__header {
+		margin-bottom: 35px;
+		color: @color-blue;
+		font-family: "AMG Anahit", sans-serif;
+		font-size: 18px;
+	}
+
+	&__title {
+		margin: 0;
+		color: @color-blue;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+
+	&__number {
+		position: relative;
+		float: right;
+		width: 95px;
+		margin: 25px 40px 30px 0;
+		border: 1px solid #dddddd;
+		border-radius: 2px;
+	}
+
+	&__number-input {
+		position: relative;
+		height: 30px;
+		width: 95px;
+		text-align: center;
+		padding: 0 30px;
+		border: none;
+		line-height: 30px;
+		color: @color-blue;
+		outline: none;
+		background: transparent;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	
+	&__number-minus, &__number-plus {
+		position: absolute;
+		top: 0;
+		height: 30px;
+		line-height: 28px;
+		width: 30px;
+		background: #f8f8f8;
+		color: #a0a7bd;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	&__number-minus {
+		left: 0;
+		border-radius: 2px 0 0 2px;
+	}
+
+	&__number-plus {
+		left: 63px;
+		line-height: 31px;
+		border-radius: 0 2px 2px 0;
+	}
+
+	&__measure {
+		position: absolute;
+		right: -40px;
+		top: 0;
+		line-height: 30px;
+	}
+
+	&__order {
+		font-size: 0;
+	}
+
+	&__price {
+		display: inline-block;
+		vertical-align: top;
+		height: 43px;
+		width: 50%;
+		line-height: 43px;
+		text-align: center;
+		font-size: 16px;
+		background: @color-main;
+		color: #ffffff;
+		border-radius: 5px 0 0 5px;
+	}
+
+	&__btn {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		padding: 0;
+		margin-bottom: 0;
+		background-color: transparent;
+		border: 2px solid @color-main;
+		color: @color-main;
+		border-radius: 0 5px 5px 0;
+		font-size: 16px;
+		
+		&:hover {
+			background: @color-main;
+		}
+	}
+}

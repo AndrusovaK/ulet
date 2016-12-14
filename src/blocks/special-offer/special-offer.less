@@ -1,0 +1,36 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/special-offer/special-offer.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+.special-offer__wrapper {
+	.make-col(6);
+}
+
+.special-offer {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 100%;
+	background: #ffffff;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+
+	&__title {
+		margin-bottom: 45px;
+		padding: 0 34px;
+		text-align: center;
+		color: @color-blue;
+		font-family: @font-family--headings;
+		font-size: 36px;
+		line-height: 55px;
+	}
+
+	&__title--blue {
+		color: @color-blue;
+	}
+
+	&__title--white {
+		color: #ffffff;
+	}
+}

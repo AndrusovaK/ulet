@@ -4,5 +4,50 @@
 
 
 .promo {
-  
+	.container();
+	margin-bottom: 28px;
+
+	&__inner {
+		.row();
+	}
+
+	&__offer {
+		.make-col(3);
+	}
+
+	&__slogan {
+		.make-col(6);
+		font-family: @font-family--headings;
+		font-size: 40px;
+		line-height: 40px;
+		text-align: center;
+		
+		&--green {
+			color: @color-green;
+		}
+		
+		&--blue {
+			color: @color-blue;
+		}
+		
+		&--orange {
+			color: @color-main;
+		}
+	}
+
+	&__offer-text--wide {
+		margin-right: -15px;
+	}
+
+	&__offer-text--narrow {
+		max-width: 217px;
+	}
+
+	&__btn {
+		margin-top: 20px;
+	}
+
+
+
+
 }

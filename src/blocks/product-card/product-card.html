@@ -1,0 +1,36 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/product-card/product-card.html')
+
+-->
+
+<div class="product-card__wrapper">
+	<article class="product-card">
+		<p>
+			<span class="product-card__code">Код @@code</span>
+			<span class="offer-label offer-label--@@label.type">@@label.name</span>
+		</p>
+
+		<div class="product-card__image">
+			<img src="img/@@imageLink" alt="@@title">
+		</div>
+
+		<header class="product-card__header clearfix">
+			<h5 class="product-card__title">@@title</h5>
+			<label class="product-card__number">
+				<input type="text" value="1" class="product-card__number-input">
+				<span class="product-card__number-minus">-</span>
+				<span class="product-card__number-plus">+</span>
+				<span class="product-card__measure">шт.</span>
+			</label>
+		</header>
+
+		<div class="product-card__order">
+			<span class="product-card__price">@@price руб</span>
+			<a href="" class="btn product-card__btn">Заказать</a>
+		</div>
+	</article>
+</div>
+
