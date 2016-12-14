@@ -2,15 +2,13 @@
 
 @import '../../less/variables.less';     // только для удобства обращения к переменным
 
+.product-card__wrapper {
+	.make-col(3);
+}
 
 .product-card {
-  .make-col(3);
-
-	height: 455px;
-	padding-top: 10px;
-	padding-bottom: 30px;
-	padding-left: 27px;
-	padding-right: 27px;
+	height: 480px;
+	padding: 10px 27px 30px;
 	background: #ffffff;
 	border-radius: 5px;
 
@@ -43,11 +41,10 @@
 		color: @color-blue;
 		font-family: "AMG Anahit", sans-serif;
 		font-size: 18px;
-		padding: 0 10px;
 	}
 
 	&__title {
-		margin: 0 0 14px 0;
+		margin: 0;
 		color: @color-blue;
 		font-size: 18px;
 		font-weight: 400;
@@ -58,9 +55,9 @@
 		position: relative;
 		float: right;
 		width: 95px;
-		margin-right: 40px;
-		margin-bottom: 10px;
+		margin: 25px 40px 30px 0;
 		border: 1px solid #dddddd;
+		border-radius: 2px;
 	}
 
 	&__number-input {
@@ -94,11 +91,13 @@
 
 	&__number-minus {
 		left: 0;
+		border-radius: 2px 0 0 2px;
 	}
 
 	&__number-plus {
 		left: 63px;
 		line-height: 31px;
+		border-radius: 0 2px 2px 0;
 	}
 
 	&__measure {
@@ -110,7 +109,6 @@
 
 	&__order {
 		font-size: 0;
-		padding: 0 10px;
 	}
 
 	&__price {
@@ -137,5 +135,9 @@
 		color: @color-main;
 		border-radius: 0 5px 5px 0;
 		font-size: 16px;
+		
+		&:hover {
+			background: @color-main;
+		}
 	}
 }

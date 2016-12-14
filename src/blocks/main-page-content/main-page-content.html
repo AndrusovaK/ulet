@@ -7,7 +7,8 @@
 -->
 <div class="main-page-content">
 	<div class="main-page-content__inner">
-		@@include('../product-card/product-card.html', {
+		@@loop('../product-card/product-card.html', [
+		{
 		"code": "101",
 		"title": "Шарик фольгизированный",
 		"label": {
@@ -16,9 +17,87 @@
 		},
 		"price": "1299",
 		"imageLink": "16-theme-different-image.jpg"
-		})
+		},
+		{
+		"code": "102",
+		"title": "Фольгизированные цифры серебряные",
+		"label": {
+		"type": "new",
+		"name": "Новинка"
+		},
+		"price": "1299",
+		"imageLink": "17.folgizirovan_cifra.jpg"
+		}
+		])
+
+		@@include('../company/company.html')
+
 	</div>
-	<div class="main-page-content__inner"></div>
+
 	<div class="main-page-content__inner">
+
+		@@include('../special-offer/special-offer.html',
+		{
+		"imageLink": "special-offer-1.jpg",
+		"title": "Гирлянды из шаров <br/> от 5000 рублей",
+		"colorModificator": "blue"
+		})
+
+
+		@@loop('../product-card/product-card.html', [
+		{
+		"code": "101",
+		"title": "Шарик фольгизированный",
+		"label": {
+		"type": "sale",
+		"name": "Акция"
+		},
+		"price": "1299",
+		"imageLink": "16-theme-different-image.jpg"
+		},
+		{
+		"code": "102",
+		"title": "Фольгизированные цифры серебряные",
+		"label": {
+		"type": "new",
+		"name": "Новинка"
+		},
+		"price": "1299",
+		"imageLink": "17.folgizirovan_cifra.jpg"
+		}
+		])
+	</div>
+	<div class="main-page-content__inner">
+
+		@@loop('../product-card/product-card.html', [
+		{
+		"code": "101",
+		"title": "Шарик фольгизированный",
+		"label": {
+		"type": "sale",
+		"name": "Акция"
+		},
+		"price": "1299",
+		"imageLink": "16-theme-different-image.jpg"
+		},
+		{
+		"code": "102",
+		"title": "Фольгизированные цифры серебряные",
+		"label": {
+		"type": "new",
+		"name": "Новинка"
+		},
+		"price": "1299",
+		"imageLink": "17.folgizirovan_cifra.jpg"
+		}
+		])
+
+		@@include('../special-offer/special-offer--top-title.html',
+		{
+		"imageLink": "special-offer-2.jpg",
+		"title": "Сопровождение мероприятий<br/> от 20000 рублей",
+		"colorModificator": "white"
+		})
+
 	</div>
 </div>
