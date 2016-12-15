@@ -4,5 +4,75 @@
 
 
 .page-footer {
+	.container();
+
+	&__inner {
+		.row();
+		padding-top: 44px;
+		padding-bottom: 44px;
+	}
+
+	&__column {
+		.make-col(3);
+	}
+
+	&__sitemap-list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__sitemap-link {
+		line-height: 30px;
+		color: @text-color;
+
+		&--primary {
+			font-weight: 700;
+		}
+	}
+
+	&__socials {
+		font-size: 0;
+		margin-bottom: 26px;
+	}
+
+	&__social-icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 49px;
+		height: 49px;
+		border-radius: 4px;
+		margin-right: 22px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&--twitter {
+			background: #00c4fc url(../img/icon_twitter.png) no-repeat 50% 50%;
+			background-size: auto 25px;
+		}
+
+		&--vk {
+			background: #3862d2 url(../img/icon_vk.png) no-repeat 50% 50%;
+			background-size: auto 21px;
+		}
+
+		&--fb {
+			background: #0362d6 url(../img/icon_fb.png) no-repeat 50% 50%;
+			background-size: auto 23px;
+		}
+
+		&--odnoklas {
+			background: #f59000 url(../img/icon__odnokl.svg) no-repeat 50% 50%;
+			background-size: auto 30px;
+		}
+	}
+
+	&__email {
+		display: block;
+		text-align: right;
+		font-size: 18px;
+	}
 
 }
