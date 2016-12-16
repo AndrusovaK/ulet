@@ -10,9 +10,9 @@
 		};
 
 		function showHideCart() {
-			if ($(firstProductCard).isAppearedOnScreen() && $(cart).is(':hidden')) {
+			if (firstProductCard && $(firstProductCard).isAppearedOnScreen() && $(cart).is(':hidden')) {
 				$(cart).fadeIn();
-			} else if (!$(firstProductCard).isAppearedOnScreen() && $(cart).is(':visible')) {
+			} else if (firstProductCard && !$(firstProductCard).isAppearedOnScreen() && $(cart).is(':visible')) {
 				$(cart).fadeOut();
 			}
 		}
