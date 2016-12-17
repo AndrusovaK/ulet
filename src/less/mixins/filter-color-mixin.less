@@ -1,0 +1,13 @@
+.make-filter-colors(@prefix, @list) {
+	.iter(length(@list));
+	.iter(@i) when (@i > 0) {
+		.iter(@i - 1);
+		@pair: extract(@list, @i);
+		@bgColor: extract(@pair, 1);
+		@borderColor: extract(@pair, 2);
+		.@{prefix}@{i} {
+			background: @bgColor;
+			border-color: @borderColor;
+		}
+	}
+}

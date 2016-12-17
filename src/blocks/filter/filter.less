@@ -1,0 +1,192 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/filter/filter.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+.filter__wrapper {
+	.container();
+}
+
+.filter {
+	width: 100%;
+	height: 102px;
+	padding: 12px 24px 15px;
+	border-radius: 4px;
+	background: #ffffff;
+	margin-bottom: 28px;
+
+	a {
+		text-decoration: none;
+		color: @text-color;
+	}
+
+	&__inner {
+		float: left;
+
+		&:first-child {
+			width: 219px;
+			margin-right: 42px;
+		}
+
+		&:nth-child(2) {
+			width: 302px;
+			margin-right: 30px;
+		}
+
+		&:last-child {
+			width: 499px;
+		}
+	}
+
+	&__col {
+		float: left;
+		width: 50%;
+	}
+
+	&__type {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 14px;
+		font-size: 16px;
+		color: #a1a6bb;
+	}
+
+	&__category {
+		font-size: 14px;
+	}
+
+	&__category-name {
+		line-height: 37px;
+	}
+
+	&__category-number {
+		display: inline-block;
+		color: #a1a6bb;
+		margin-left: 5px;
+		font-size: 12px;
+	}
+
+	&__amount {
+		margin-bottom: 19px;
+	}
+
+	&__amount-select {
+		height: 24px;
+		padding: 0 9px 0 13px;
+		margin-right: 9px;
+		background: #f0f2f7;
+		font-size: 14px;
+		border: none;
+		border-radius: 4px;
+		outline: none;
+	}
+
+	&__offer {
+		font-size: 0;
+	}
+
+	&__offer-radio {
+		display: none;
+	}
+
+	.offer-label {
+		margin-right: 9px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	&__events {
+		margin-bottom: 9px;
+	}
+
+	&__event {
+		margin-right: 20px;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	&__colors {
+		display: inline-block;
+		vertical-align: middle;
+		width: 188px;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	&__color {
+		display: inline-block;
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+		background: red;
+		border: 3px solid red;
+		margin-right: 4px;
+		margin-bottom: 5px;
+
+
+		&:nth-of-type(10n) {
+			margin-right: 0;
+		}
+
+		&:nth-of-type(n+11) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__color-radio {
+		display: none;
+	}
+
+	&__price-wrapper {
+		padding-left: 30px;
+	}
+
+	&__price {
+		display: inline-block;
+		vertical-align: middle;
+		width: 130px;
+
+		.input-text {
+			display: inline-block;
+			vertical-align: top;
+			width: 60px;
+			margin-bottom: 4px;
+		}
+	}
+
+	&__price-inputs {
+		margin: 0;
+	}
+
+	&__range {
+		width: 100%;
+		height: 15px;
+		background: url(../img/range.png) no-repeat 50% 50%;
+		background-size: cover;
+	}
+}
+
+@colors:
+		#bc0023 #bc0023,
+		#daebfb #daebfb,
+		#ffffff #e89b24,
+		#f5e4ea #f5e4ea,
+		#60b1ab #60b1ab,
+		#f7f40f #f7f40f,
+		#c8db31 #c8db31,
+		#9d9cc6 #9d9cc6,
+		#cf749d #cf749d,
+		#468f36 #468f36,
+		#3674ad #3674ad,
+		#30969b #30969b,
+		#94c43c #94c43c,
+		#efcc7b #efcc7b,
+		#ffffff #fde9d0,
+		#6167a1 #6167a1,
+		#403d80 #403d80,
+		#e8d21d #e8d21d,
+		#61af4a #61af4a,
+		#c2485f #c2485f;
+
+.make-filter-colors(filter__color, @colors);

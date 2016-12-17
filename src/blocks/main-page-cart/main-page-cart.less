@@ -1,0 +1,58 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/main-page-cart/main-page-cart.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+.main-page-cart__wrapper {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	height: 52px;
+	width: 100%;
+	background: @color-main;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.main-page-cart {
+	.container();
+
+
+	&__inner {
+		.row();
+	}
+
+	&__contacts, &__details {
+		.make-col(6);
+		color: #ffffff;
+	}
+
+	&__phone, &__email {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 38px;
+		color: #ffffff;
+	}
+
+	&__phone {
+		margin-right: 30px;
+	}
+
+	&__details {
+		text-align: right;
+
+		.btn {
+			height: 36px;
+			margin-left: 46px;
+			line-height: 36px;
+		}
+	}
+	&__number {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	&__total-price {
+		display: inline-block;
+		margin-left: 20px;
+	}
+}
