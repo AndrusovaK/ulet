@@ -56,6 +56,10 @@
 
 	&__category-name {
 		line-height: 37px;
+
+		&.active {
+			color: @color-green;
+		}
 	}
 
 	&__category-number {
@@ -86,10 +90,27 @@
 
 	&__offer-radio {
 		display: none;
+
+		&:checked + .offer-label--checkable {
+			color: #ffffff;
+		}
+
+		&:checked + .offer-label--hit {
+			background-color: @color-green;
+		}
+
+		&:checked +.offer-label--sale {
+			background-color: @color-main;
+		}
+
+		&:checked + .offer-label--new {
+			background-color: @color-blue;
+		}
 	}
 
 	.offer-label {
 		margin-right: 9px;
+		cursor: pointer;
 
 		&:last-of-type {
 			margin-right: 0;
@@ -104,6 +125,10 @@
 		margin-right: 20px;
 		font-size: 14px;
 		line-height: 24px;
+
+		&.active {
+			color: @color-green;
+		}
 	}
 
 	&__colors {
@@ -124,6 +149,7 @@
 		margin-right: 4px;
 		margin-bottom: 5px;
 
+		cursor: pointer;
 
 		&:nth-of-type(10n) {
 			margin-right: 0;
@@ -136,6 +162,10 @@
 
 	&__color-radio {
 		display: none;
+
+		&:checked + .filter__color {
+			background: transparent;
+		}
 	}
 
 	&__price-wrapper {
@@ -157,20 +187,23 @@
 
 	&__price-inputs {
 		margin: 0;
+
+		.input-text:last-child {
+			float: right;
+		}
 	}
 
 	&__range {
 		width: 100%;
 		height: 15px;
-		background: url(../img/range.png) no-repeat 50% 50%;
-		background-size: cover;
+		padding-top: 5px;
 	}
 }
 
 @colors:
 		#bc0023 #bc0023,
 		#daebfb #daebfb,
-		#ffffff #e89b24,
+		@color-main @color-main,
 		#f5e4ea #f5e4ea,
 		#60b1ab #60b1ab,
 		#f7f40f #f7f40f,
@@ -182,7 +215,7 @@
 		#30969b #30969b,
 		#94c43c #94c43c,
 		#efcc7b #efcc7b,
-		#ffffff #fde9d0,
+		#fde9d0 #fde9d0,
 		#6167a1 #6167a1,
 		#403d80 #403d80,
 		#e8d21d #e8d21d,
@@ -190,3 +223,39 @@
 		#c2485f #c2485f;
 
 .make-filter-colors(filter__color, @colors);
+
+.noUi-horizontal {
+	height: 6px;
+}
+
+.noUi-target {
+	border: none;
+	background: #dddddd;
+}
+
+.noUi-handle {
+	border: none;
+	border-radius: 50%;
+	background: @color-main;
+	box-shadow: none;
+}
+
+.noUi-horizontal .noUi-handle {
+	width: 15px;
+	height: 15px;
+	left: -7.5px;
+	top: -5px;
+
+	&:before {
+		display: none;
+	}
+
+	&:after {
+		display: none;
+	}
+}
+
+.noUi-connect {
+	background-color: #f3a44b;
+	box-shadow: none;
+}

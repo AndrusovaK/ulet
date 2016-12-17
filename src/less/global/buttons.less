@@ -61,22 +61,42 @@
   display: inline-block;
   vertical-align: middle;
   height: 20px;
-  line-height: 21px;
+  line-height: 20px;
   padding: 0 10px;
   color: #ffffff;
+  border: 2px solid;
   border-radius: 4px;
 
   &--hit {
-    padding: 0 15px;
     background-color: @color-green;
+    border-color: @color-green;
   }
 
   &--sale {
     background-color: @color-main;
+    border-color: @color-main;
   }
 
   &--new {
     background-color: @color-blue;
-    margin-right: 0;
+    border-color: @color-blue;
+  }
+}
+
+.offer-label--checkable {
+  color: @text-color;
+  &.offer-label--hit {
+    background-color: transparent;
+    border-color: @color-green;
+  }
+
+  &.offer-label--sale {
+    background-color: transparent;
+    border-color: @color-main;
+  }
+
+  &.offer-label--new {
+    background-color: transparent;
+    border-color: @color-blue;
   }
 }
