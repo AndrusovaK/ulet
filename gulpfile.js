@@ -264,6 +264,11 @@ gulp.task('js:copy', function (callback) {
   if(fileExistAndHasContent(dirs.source + '/js/nouislider.min.js')) {
     jsLibs.push(dirs.source + '/js/nouislider.min.js');
   }
+
+  if(fileExistAndHasContent(dirs.source + '/js/puretabs.min.js')) {
+    jsLibs.push(dirs.source + '/js/puretabs.min.js');
+  }
+
   if(jsLibs){
     console.log('---------- Копирование JS-библиотек');
     return gulp.src(jsLibs)

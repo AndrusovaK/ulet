@@ -1,0 +1,44 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/price-tabs/price-tabs.html')
+
+-->
+<div class="price-tabs">
+	<div class="price-tabs__inner">
+		<p class="price-tabs__info">Компания "Улет" предлагает услуги высококачественной печати на воздушных шарах
+			для рекламных компаний, праздников и корпоративов. Бесплатная консультация нашего специалиста поможет вам быстро
+			подобрать формат и размеры шаров, а наш онлайн калькулятор позволит Вам быстро расчитать стоимость заказа.
+		</p>
+
+		<ul class="price-tabs__links">
+			<li class="price-tabs__tab price-tabs__tab--active" data-tab="latecs28sm">
+				Печать на шарах 28 см
+			</li>
+			<li class="price-tabs__tab" data-tab="latecs32sm">
+				Печать на шарах 32 см
+			</li>
+			<li class="price-tabs__tab price-tabs__tab--wide" data-tab="naduv">
+				Надувка и обработка шариков
+			</li>
+			<li class="price-tabs__tab" data-tab="other">
+				Другие услуги
+			</li>
+		</ul>
+
+		<div class="price-tabs__contents">
+			<div id="latecs28sm" class="price-tabs__section current">
+
+				<div class="price-tabs__price-table"></div>
+
+				some content
+
+			</div>
+			<div id="latecs32sm" class="price-tabs__section">Содержимое второй секции</div>
+			<div id="naduv" class="price-tabs__section">Содержимое первой секции</div>
+			<div id="other" class="price-tabs__section">Содержимое второй секции</div>
+		</div>
+	</div>
+
+</div>

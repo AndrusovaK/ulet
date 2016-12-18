@@ -1,0 +1,59 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/table/table.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.table {
+	width: 100%;
+	background: #ffffff;
+	border-radius: 6px;
+	border-collapse: collapse;
+
+	&__title {
+		height: 60px;
+
+		th {
+			font-family: "AMG Anahit", sans-serif;
+			font-size: 30px;
+			font-weight: 400;
+			color: @color-main;
+		}
+	}
+
+	&__cols-titles {
+		height: 48px;
+		background: #f8f8f8;
+
+		th {
+			font-weight: 400;
+			color: #a0a7bd;
+			border: 1px solid #e8e8e8;
+			border-left: none;
+		}
+	}
+
+	tbody tr {
+		height: 48px;
+	}
+
+	tbody tr:nth-child(2n) {
+		background: #f8f8f8;
+	}
+
+	td {
+		padding: 0 10px;
+		border-right: 1px solid #e8e8e8;
+		font-size: 14px;
+		color: @text-color;
+		text-align: center;
+
+		&:first-child {
+			font-size: 16px;
+			color: #a0a7bd;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
