@@ -61,6 +61,7 @@
 	&__contents {
 		.make-col(10);
 		.col-offset(@column: 1);
+		margin-bottom: 50px;
 	}
 
 	&__section {
@@ -73,6 +74,50 @@
 
 	&__price-table {
 		margin-bottom: 28px;
+	}
+
+	&__calc-table {
+		margin-bottom: 33px;
+	}
+	
+	&__more-info {
+		.row();
+	}
+	
+	&__images-wrapper {
+		.make-col(7);
+	}
+	
+	&__images-inner {
+		.row();
+		margin-bottom: 30px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	
+	&__image-col {
+		.make-col(6);
+	}
+
+	&__image {
+		height: 220px;
+		padding: 14px;
+		border-radius: 6px;
+		background: #ffffff;
+		text-align: center;
+
+		img {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			max-height: 100%;
+		}
+	}
+
+	&__form-wrapper {
+		.make-col(5);
 	}
 }
 

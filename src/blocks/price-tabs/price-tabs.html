@@ -28,16 +28,108 @@
 		</ul>
 
 		<div class="price-tabs__contents">
+			<!-- Первый таб -->
 			<div id="latecs28sm" class="price-tabs__section current">
 
 				<div class="price-tabs__price-table"></div>
 
-				some content
+				<div class="price-tabs__calc-table">
+					<table class="table">
+						<thead>
+						<tr class="table__title">
+							<th colspan="5">Калькулятор стоимости печати</th>
+						</tr>
+						<tr class="table__cols-titles">
+							<th>Наименование услуги</th>
+							<th>Тираж</th>
+							<th>Стоимость за шт.</th>
+							<th>Всего</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tfoot class="table__footer">
+						<tr>
+							<td></td>
+							<td></td>
+							<td>Итого к оплате</td>
+							<td>2328р.</td>
+							<td></td>
+						</tr>
+						</tfoot>
+						<tbody>
+						<tr>
+							<td>1 цвет, 1 сторона</td>
+							<td>
+								<label class="number">
+									<input type="text" value="1" class="number__input">
+									<span class="number__minus">-</span>
+									<span class="number__plus">+</span>
+								</label>
+							</td>
+							<td>28р</td>
+							<td>900р.</td>
+							<td class="table__delete-row">X</td>
+						</tr>
+						<tr>
+							<td>1 цвет, 2 стороны</td>
+							<td>
+								<label class="number">
+									<input type="text" value="1" class="number__input">
+									<span class="number__minus">-</span>
+									<span class="number__plus">+</span>
+								</label>
+							</td>
+							<td>30р.</td>
+							<td>1428р</td>
+							<td class="table__delete-row">X</td>
+						</tr>
+						</tbody>
+
+					</table>
+				</div>
+
+				<div class="price-tabs__more-info">
+					<div class="price-tabs__images-wrapper">
+						<div class="price-tabs__images-inner">
+							<div class="price-tabs__image-col">
+								<div class="price-tabs__image">
+									<img src="img/price28sm-1.png" alt="">
+								</div>
+							</div>
+							<div class="price-tabs__image-col">
+								<div class="price-tabs__image">
+									<img src="img/price28sm-2.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="price-tabs__images-inner">
+							<div class="price-tabs__image-col">
+								<div class="price-tabs__image">
+									<img src="img/price28sm-3.png" alt="">
+								</div>
+							</div>
+							<div class="price-tabs__image-col">
+								<div class="price-tabs__image">
+									<img src="img/price28sm-4.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="price-tabs__form-wrapper">
+						@@include('../order-form/order-form.html')
+					</div>
+				</div>
 
 			</div>
+
+			<!---->
 			<div id="latecs32sm" class="price-tabs__section">Содержимое второй секции</div>
-			<div id="naduv" class="price-tabs__section">Содержимое первой секции</div>
-			<div id="other" class="price-tabs__section">Содержимое второй секции</div>
+
+			<!---->
+			<div id="naduv" class="price-tabs__section">Содержимое третьей секции</div>
+
+			<!---->
+			<div id="other" class="price-tabs__section">Содержимое четвертой секции</div>
 		</div>
 	</div>
 
