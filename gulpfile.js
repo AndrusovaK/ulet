@@ -265,10 +265,6 @@ gulp.task('js:copy', function (callback) {
     jsLibs.push(dirs.source + '/js/nouislider.min.js');
   }
 
-  if(fileExistAndHasContent(dirs.source + '/js/puretabs.min.js')) {
-    jsLibs.push(dirs.source + '/js/puretabs.min.js');
-  }
-
   if(jsLibs){
     console.log('---------- Копирование JS-библиотек');
     return gulp.src(jsLibs)
@@ -398,7 +394,7 @@ function getComponentsFiles() {
   // Добавим глобальныe LESS-файлы в массив с обрабатываемыми LESS-файлами
   сomponentsFilesList.less.push(dirs.source + '/less/**/*.less');
 
-  // Добавим глобальный JS-файл в начало массива с обрабатываемыми JS-файлами
+// Добавим глобальный JS-файл в начало массива с обрабатываемыми JS-файлами
   if(fileExistAndHasContent(dirs.source + '/js/global-script.js')) {
     сomponentsFilesList.js.unshift(dirs.source + '/js/global-script.js');
   }
@@ -419,9 +415,10 @@ function getComponentsFiles() {
     сomponentsFilesList.js.unshift(dirs.source + '/js/slick.js'); // добавляем в конец
   }
 
-  //if(fileExistAndHasContent(dirs.source + '/js/nouislider.min.js')) {
-  //  сomponentsFilesList.js.push(dirs.source + '/js/nouislider.min.js'); // добавляем в конец
-  //}
+  if(fileExistAndHasContent(dirs.source + '/js/fotorama.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/fotorama.js');
+  }
+
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/css/global-css.css')) {
@@ -435,6 +432,10 @@ function getComponentsFiles() {
 
   if(fileExistAndHasContent(dirs.source + '/css/nouislider.min.css')) {
      сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/nouislider.min.css');
+  }
+
+  if(fileExistAndHasContent(dirs.source + '/css/fotorama.css')) {
+    сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/fotorama.css');
   }
 
   if(fileExistAndHasContent(dirs.source + '/css/slick-theme.css')) {

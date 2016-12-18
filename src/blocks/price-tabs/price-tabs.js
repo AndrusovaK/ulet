@@ -89,8 +89,9 @@
 
 			var activeTab = $('.price-tabs__tab--active').attr('data-tab');
 
-			priceTable.create(activeTab, priceTablesData);
-
+			if(activeTab) {
+				priceTable.create(activeTab, priceTablesData);
+			}
 
 			/* Init tabs*/
 			$(tabLink).click(function () {
