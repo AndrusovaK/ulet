@@ -260,6 +260,11 @@ gulp.task('js:copy', function (callback) {
   if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
     jsLibs.push(dirs.source + '/js/jquery.js');
   }
+
+  if(fileExistAndHasContent(dirs.source + '/js/nouislider.min.js')) {
+    jsLibs.push(dirs.source + '/js/nouislider.min.js');
+  }
+
   if(jsLibs){
     console.log('---------- Копирование JS-библиотек');
     return gulp.src(jsLibs)
@@ -389,26 +394,31 @@ function getComponentsFiles() {
   // Добавим глобальныe LESS-файлы в массив с обрабатываемыми LESS-файлами
   сomponentsFilesList.less.push(dirs.source + '/less/**/*.less');
 
-  // Добавим глобальный JS-файл в начало массива с обрабатываемыми JS-файлами
+// Добавим глобальный JS-файл в начало массива с обрабатываемыми JS-файлами
   if(fileExistAndHasContent(dirs.source + '/js/global-script.js')) {
     сomponentsFilesList.js.unshift(dirs.source + '/js/global-script.js');
   }
 
   // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
-  if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
-     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
-  }
+  //if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
+  //   сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
+  //}
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
   if(fileExistAndHasContent(dirs.source + '/js/jquery-migrate-1.2.1.min.js')) {
   //   сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
   //   или
-     сomponentsFilesList.js.push(dirs.source + '/js/jquery-migrate-1.2.1.min.js'); // добавляем в конец
+     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery-migrate-1.2.1.min.js'); // добавляем в конец
   }
 
   if(fileExistAndHasContent(dirs.source + '/js/slick.js')) {
-    сomponentsFilesList.js.push(dirs.source + '/js/slick.js'); // добавляем в конец
+    сomponentsFilesList.js.unshift(dirs.source + '/js/slick.js'); // добавляем в конец
   }
+
+  if(fileExistAndHasContent(dirs.source + '/js/fotorama.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/fotorama.js');
+  }
+
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/css/global-css.css')) {
@@ -418,6 +428,14 @@ function getComponentsFiles() {
   // Если хочется иметь в папке сборки какие-то еще отдельные CSS-файлы, пишите их здесь
   if(fileExistAndHasContent(dirs.source + '/css/slick.css')) {
      сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/slick.css');
+  }
+
+  if(fileExistAndHasContent(dirs.source + '/css/nouislider.min.css')) {
+     сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/nouislider.min.css');
+  }
+
+  if(fileExistAndHasContent(dirs.source + '/css/fotorama.css')) {
+    сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/fotorama.css');
   }
 
   if(fileExistAndHasContent(dirs.source + '/css/slick-theme.css')) {

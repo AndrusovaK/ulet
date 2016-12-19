@@ -25,3 +25,59 @@
 		display: block;
 	}
 }
+
+.number {
+	position: relative;
+	display: inline-block;
+	width: 95px;
+	border: 1px solid #dddddd;
+	border-radius: 2px;
+	background: #ffffff;
+
+	&__input {
+		position: relative;
+		height: 30px;
+		width: 95px;
+		text-align: center;
+		padding: 0 30px;
+		border: none;
+		line-height: 30px;
+		color: @color-blue;
+		outline: none;
+		background: transparent;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__minus, &__plus {
+		position: absolute;
+		top: 0;
+		height: 30px;
+		line-height: 28px;
+		width: 30px;
+		background: #f8f8f8;
+		color: #a0a7bd;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	&__minus {
+		left: 0;
+		border-radius: 2px 0 0 2px;
+	}
+
+	&__plus {
+		left: 63px;
+		line-height: 31px;
+		border-radius: 0 2px 2px 0;
+	}
+
+	&__measure {
+		position: absolute;
+		right: -40px;
+		top: 0;
+		line-height: 30px;
+	}
+}

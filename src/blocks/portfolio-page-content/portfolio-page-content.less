@@ -1,0 +1,42 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/portfolio-page-content/portfolio-page-content.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+.portfolio-page-content__categories-wrapper {
+	.row();
+	margin-bottom: 10px;
+}
+
+.portfolio-page-content__categories-inner {
+	.make-col(10);
+	.col-offset(@column: 1);
+}
+
+.portfolio-page-content {
+	.container();
+
+	&__categories {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		li {
+			margin-right: 80px;
+			line-height: 40px;
+		}
+	}
+
+	&__category-link.active {
+		color: @color-green;
+	}
+
+	.fotorama__wrapper {
+		.row()
+	}
+
+	.fotorama__inner {
+		.make-col(10);
+		.col-offset(@column: 1);
+	}
+}
