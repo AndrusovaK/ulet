@@ -1,0 +1,49 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/contacts-page-content/contacts-page-content.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.contacts {
+	.container();
+	padding-top: 20px;
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+
+	&__map {
+		height: 380px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	&__inner {
+		.row();
+	}
+
+	&__info {
+		.make-col(10);
+		.col-offset(@column: 1);
+		margin-bottom: 20px;
+	}
+
+	&__callback {
+		.make-col(2);
+		.col-offset(@column: 2);
+		margin-bottom: 35px;
+	}
+
+	&__address {
+		.make-col(4);
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
+	&__email {
+		.make-col(3);
+		padding-right: 95px;
+	}
+
+	.btn {
+		margin-top: 20px;
+	}
+}
