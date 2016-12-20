@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Заголовок</title>
+	<meta name="description" content="">
+	@@include('_include/page_head.html')
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+
+@@include('blocks/page-header/page-header.html')
+
+@@include('blocks/contacts-page-content/contacts-page-content.html')
+
+
+@@include('blocks/page-footer/page-footer.html')
+
+@@include('_include/page_bottom.html')
+
+<script>
+	$(function () {
+		// Яндекс карта
+		ymaps.ready(init);
+		var map;
+
+		function init() {
+			map = new ymaps.Map('yndxMap', {
+				center: [59.935851, 30.323215],
+				zoom: 11,
+				controls: []
+			});
+
+			var placemark = new ymaps.Placemark([59.935851, 30.323215], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/map-icon.svg',
+				iconImageSize: [40, 64]
+			});
+
+			map.geoObjects.add(placemark);
+		}
+	});
+</script>
+
+</body>
+</html>
