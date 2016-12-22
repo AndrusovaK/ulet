@@ -168,7 +168,7 @@
 				var price;
 
 				for (var i = 1; i < currentTabPriceData.columns.length; i++) {
-					if ((numberOfBalloons >= Number(currentTabPriceData.columns[i].name) && numberOfBalloons < Number(currentTabPriceData.columns[i+1].name)) ||
+					if ((numberOfBalloons >= Number(currentTabPriceData.columns[i].name) && i !== currentTabPriceData.columns.length - 1 && numberOfBalloons < Number(currentTabPriceData.columns[i+1].name)) ||
 							(numberOfBalloons >= Number(currentTabPriceData.columns[i].name) && i === currentTabPriceData.columns.length - 1)){
 						priceIndex = i;
 						break;
