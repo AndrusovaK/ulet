@@ -265,6 +265,7 @@ gulp.task('js:copy', function (callback) {
     jsLibs.push(dirs.source + '/js/nouislider.min.js');
   }
 
+
   if(jsLibs){
     console.log('---------- Копирование JS-библиотек');
     return gulp.src(jsLibs)
@@ -419,6 +420,10 @@ function getComponentsFiles() {
     сomponentsFilesList.js.unshift(dirs.source + '/js/fotorama.js');
   }
 
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.magnific-popup.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.magnific-popup.js');
+  }
+
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/css/global-css.css')) {
@@ -436,6 +441,10 @@ function getComponentsFiles() {
 
   if(fileExistAndHasContent(dirs.source + '/css/fotorama.css')) {
     сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/fotorama.css');
+  }
+
+  if(fileExistAndHasContent(dirs.source + '/css/magnific-popup.css')) {
+    сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/magnific-popup.css');
   }
 
   if(fileExistAndHasContent(dirs.source + '/css/slick-theme.css')) {
