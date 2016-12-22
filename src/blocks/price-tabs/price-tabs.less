@@ -74,10 +74,19 @@
 
 	&__price-table {
 		margin-bottom: 28px;
+		
+		td:nth-child(n+2):hover {
+			cursor: pointer;
+			box-shadow: 0 0 6px rgba(255, 134, 0, 0.5);
+		}
 	}
 
 	&__calc-table {
 		margin-bottom: 33px;
+
+		.table__cols-titles th:nth-of-type(4) {
+			min-width: 180px;
+		}
 	}
 	
 	&__more-info {
