@@ -26,7 +26,7 @@
 		};
 
 
-		var fotorama = $('.fotorama').fotorama({
+		var fotorama = $('#portfolio-fotorama').fotorama({
 			nav: 'thumbs',
 			maxheight: 612,
 			fit: 'cover',

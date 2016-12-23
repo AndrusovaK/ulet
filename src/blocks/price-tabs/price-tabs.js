@@ -190,6 +190,11 @@
 			function addListeners () {
 				$('#price-table td:nth-child(n+2)').on('click', printCalculator.addOption);
 				$(document).on('click', '#calculator .table__delete-option', printCalculator.deleteOption);
+				$(document).on('change', '#calculator .number__input', function () {
+					if($(this).val() < 30) {
+						$(this).val(30);
+					}
+				});
 				$(document).on('change', '#calculator .number__input', changeNumberOfBalloons);
 				$(document).on('click', '#calculator .number__minus', function () {
 					var $input = $(this).parent().find('input');

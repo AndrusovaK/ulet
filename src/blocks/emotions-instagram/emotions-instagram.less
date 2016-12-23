@@ -1,0 +1,28 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/emotions-instagram/emotions-instagram.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+.emotions-instagram__wrapper {
+	.container();
+}
+
+.emotions-instagram {
+	.row();
+
+	&__tag {
+		.make-col(12);
+		margin-bottom: 30px;
+		font-size: 18px;
+		text-align: center;
+	}
+
+	&__item {
+		.make-col(3);
+		margin-bottom: 36px;
+	}
+
+	&__image {
+		width: 255px;
+		max-height: 255px;
+	}
+}

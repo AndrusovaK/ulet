@@ -1,0 +1,137 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/popup/popup.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+	opacity : 0;
+
+	-webkit-transition : all .15s ease-out;
+	transition : all .15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity : .8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity : 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity : 0;
+
+	-webkit-transition : all .15s ease-out;
+	transition : all .15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity : 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity : 0;
+}
+
+.mfp-zoom-out-cur {
+	cursor : default;
+}
+
+.popup {
+	position: relative;
+	width: 734px;
+	box-sizing: border-box;
+	padding: 48px 111px 56px 98px;
+	margin: auto;
+	border-radius: 8px;
+	background-color: #fff;
+
+	&__inner {
+		.clearfix();
+	}
+
+	&__image {
+		position: relative;
+		float: left;
+		width: 255px;
+		height: 300px;
+		margin-right: 30px;
+		padding-top: 44px;
+
+		img {
+			width: 255px;
+			max-height: 255px;
+		}
+
+		.offer-label {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	&__product-info {
+		float: left;
+		width: 240px;
+	}
+
+	&__product-title {
+		margin-bottom: 33px;
+		margin-top: 25px;
+		color: @color-blue;
+		font-size: 20px;
+		line-height: 26px;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__list-item {
+		.clearfix();
+		margin-bottom: 8px;
+	}
+
+	&__list-item-title {
+		float: left;
+		min-width: 135px;
+		color: #a0a7bd;
+	}
+
+	&__product-description {
+		margin-top: 22px;
+		margin-bottom: 42px;
+		font-size: 14px;
+
+		&-title {
+			color: @text-color;
+		}
+
+		&-text {
+			color: #bec0c7;
+			line-height: 22px;
+		}
+	}
+
+	&__cart {
+		.clearfix();
+	}
+
+	.number {
+		margin-top: 5px;
+		float: left;
+	}
+	
+	.number__measure {
+		font-family: "AMG Anahit", sans-serif;
+		color: @color-blue;
+	}
+
+	.product-card__order {
+		float: right;
+		width: 200px;
+	}
+}

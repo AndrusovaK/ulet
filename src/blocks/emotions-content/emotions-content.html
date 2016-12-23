@@ -1,0 +1,28 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/emotions-content/emotions-content.html')
+
+-->
+
+
+<div class="emotions-content">
+
+	<div class="emotions-content__inner">
+		@@include('../emotions-fotorama/emotions-fotorama.html', {"id": "emotions-fotorama-big", "class":
+		"emotions-fotorama--big"})
+	</div>
+
+
+	<div class="emotions-content__inner">
+		@@include('../emotions-video/emotions-video.html')
+		@@include('../emotions-fotorama/emotions-fotorama.html', {"id": "emotions-fotorama1"})
+	</div>
+
+	<div class="emotions-content__inner">
+		@@include('../emotions-fotorama/emotions-fotorama.html', {"id": "emotions-fotorama2"})
+		@@include('../vk-widget/vk-widget.html')
+	</div>
+
+</div>
