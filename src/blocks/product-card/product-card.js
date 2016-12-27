@@ -1,7 +1,7 @@
 (function(){
 	$(function () {
 		$(document).on('click', '.number__minus', function () {
-			var $input = $(this).closest('.product-card').find('input');
+			var $input = $(this).closest('.product-card__number').find('input');
 			var count = parseInt($input.val()) - 1;
 			count = count < 1 ? 1 : count;
 			$input.val(count);
@@ -10,7 +10,7 @@
 		});
 
 		$(document).on('click', '.number__plus', function () {
-			var $input = $(this).closest('.product-card').find('input');
+			var $input = $(this).closest('.product-card__number').find('input');
 			$input.val(parseInt($input.val()) + 1);
 			$input.change();
 			return false;
