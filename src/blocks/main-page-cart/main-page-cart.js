@@ -1,7 +1,6 @@
 (function(){
 	$(function () {
 		var firstProductCard = $('.product-card')[0];
-		var cart = $('.main-page-cart__wrapper');
 
 		$.fn.isAppearedOnScreen = function () {
 			var element = this.get(0);
@@ -9,19 +8,62 @@
 			return bounds.top < window.innerHeight;
 		};
 
-		function showHideCart() {
-			if (firstProductCard && $(firstProductCard).isAppearedOnScreen() && $(cart).is(':hidden')) {
-				$(cart).fadeIn();
-			} else if (firstProductCard && !$(firstProductCard).isAppearedOnScreen() && $(cart).is(':visible')) {
-				$(cart).fadeOut();
-			}
-		}
+		var cart = {
+			element: $('.main-page-cart__wrapper'),
+			showHide: function () {
+				if (firstProductCard && $(firstProductCard).isAppearedOnScreen() && this.element.is(':hidden')) {
+					this.element.fadeIn();
+				} else if (firstProductCard && !$(firstProductCard).isAppearedOnScreen() && this.element.is(':visible')) {
+					this.element.fadeOut();
+				}
+			},
+			add: function (event) {
+				event.preventDefault();
+				var currentProduct = $(this).closest('.product-card');
+				var orderData = {
+					"price": Number(currentProduct.attr('data-price')),
+					"title": currentProduct.attr('data-title'),
+					"number": Number(currentProduct.find('.number__input').val()),
+					"currentProductCode": currentProduct.attr('data-code')
+				};
 
-		showHideCart();
+				var localStorageCart = localStorage.getItem("productCart");
+				if(localStorageCart) {
+					localStorageCart = JSON.parse(localStorageCart);
+					localStorageCart.options.push(orderData);
+					localStorage.setItem("productCart", JSON.stringify(localStorageCart));
+				} else {
+					var cartData = {};
+					cartData.options = [orderData];
+					localStorage.setItem("productCart", JSON.stringify(cartData));
+				}
+
+				cart.calculate();
+			},
+			calculate: function () {
+				var cartContent = JSON.parse(localStorage.getItem("productCart"));
+				var numberOfBalloons = 0,
+						totalPrice = 0;
+				if (cartContent && cartContent.options.length) {
+					cartContent.options.forEach(function (elem) {
+						numberOfBalloons += elem.number;
+						totalPrice += elem.number * elem.price;
+					});
+				}
+
+				cart.element.find('.main-page-cart__number').html(numberOfBalloons);
+				cart.element.find('.main-page-cart__total-price').html(totalPrice);
+			}
+		};
+
+		cart.showHide();
+		cart.calculate();
 
 		$(document).scroll(function () {
-			showHideCart();
+			cart.showHide();
 		});
+
+		$('.product-card .product-card__btn').on('click', cart.add);
 	});
 
 }());
