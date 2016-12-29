@@ -6,13 +6,19 @@
 
 -->
 <div class="popup popup--order mfp-hide" id="popup-order">
+	<p class="order-form__title">Выбранные позиции</p>
+	<p class="popup__order-titles">
+		<span class="popup__order-item-td popup__order-item-title">Название</span>
+		<span class="popup__order-item-td popup__order-item-number">Количество</span>
+		<span class="popup__order-item-td popup__order-item-price">Стоимость за шт.</span>
+		<span class="popup__order-item-td popup__order-item-delete"></span>
+	</p>
+	<ul class="popup__order-list"></ul>
 	<div class="order-form">
 		<form action="">
 			<p class="order-form__title">Форма заказа</p>
 			<input type="text" class="input-text order-form__input" placeholder="Имя">
 			<input type="text" class="input-text order-form__input" placeholder="Номер телефона">
-			<input type="text" class="input-text order-form__input" placeholder="E-mail">
-			<textarea class="order-form__textarea" placeholder="Ваш комментарий"></textarea>
 			<input type="submit" class="btn" value="Позвоните мне скорее">
 		</form>
 	</div>

@@ -3,12 +3,62 @@
 	$(function () {
 
 		// Открытие модалки с формой заказа
-		$('.order-link').magnificPopup({
-			type: 'inline',
-			midClick: true,
-			mainClass: 'mfp-fade',
-			removalDelay: 300
-		});
+
+		function deleteFromCart(e) {
+			e.preventDefault();
+			var li = $(this).closest('li');
+			var localStorageCart = JSON.parse(localStorage.getItem("productCart"));
+
+			var optionIndex;
+
+			$.grep(localStorageCart.options, function (elem, index) {
+				if(li.find('.popup__order-item-title').html() == elem.title) {
+					optionIndex = index;
+				}
+			});
+
+			if(optionIndex > -1) {
+				localStorageCart.options.splice(optionIndex, 1);
+				localStorage.setItem('productCart', JSON.stringify(localStorageCart));
+				li.remove();
+				cart.calculate();
+			}
+		}
+
+		function openOrderModal(e) {
+			e.preventDefault();
+			$.magnificPopup.open({
+				items: {
+					src: '#popup-order'
+				},
+				type: 'inline',
+				midClick: true,
+				mainClass: 'mfp-fade',
+				removalDelay: 300
+			});
+
+			var localStorageCart = localStorage.getItem("productCart"),
+					orderList = $('.popup__order-list').html('');
+
+			localStorageCart = JSON.parse(localStorageCart);
+
+			for(var i = 0; i < localStorageCart.options.length; i++) {
+				var listElement = $(
+						'<li class="popup__order-item">' +
+							'<span class="popup__order-item-td popup__order-item-title">'+ localStorageCart.options[i].title +'</span>' +
+							'<span class="popup__order-item-td popup__order-item-number">'+ localStorageCart.options[i].number +'</span>' +
+							'<span class="popup__order-item-td popup__order-item-price">'+ localStorageCart.options[i].price +' руб.</span>' +
+							'<span class="popup__order-item-td popup__order-item-delete">x</span>' +
+						'</li>'
+				);
+
+				orderList.append(listElement);
+			}
+
+			$('.popup__order-item-delete').on('click', deleteFromCart);
+		}
+
+		$('.order-link').on('click', openOrderModal);
 
 		// Открытие модалка с товаром
 		function openProductModal(event) {

@@ -22,7 +22,7 @@ var cart = {
 			"price": Number(currentProduct.attr('data-price')),
 			"title": currentProduct.attr('data-title'),
 			"number": Number(currentProduct.find('.number__input').val()),
-			"currentProductCode": currentProduct.attr('data-code')
+			"code": currentProduct.attr('data-code')
 		};
 
 		var localStorageCart = localStorage.getItem("productCart");

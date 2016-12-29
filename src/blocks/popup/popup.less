@@ -48,8 +48,12 @@
 	background-color: #fff;
 
 	&--order {
-		width: 376px;
-		padding: 0;
+		padding: 30px;
+
+		.order-form {
+			width: 376px;
+			margin: 0 auto;
+		}
 	}
 
 	&__inner {
@@ -139,5 +143,47 @@
 	.product-card__order {
 		float: right;
 		width: 200px;
+	}
+
+	&__order-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__order-item {
+		font-size: 0;
+	}
+
+	&__order-titles {
+		font-size: 0;
+		font-weight: 700;
+	}
+
+	&__order-item-td {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 10px 20px;
+		text-align: center;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&__order-item-title {
+		width: 200px;
+	}
+
+	&__order-item-number {
+		width: 170px;
+	}
+
+	&__order-item-price {
+		width: 200px;
+	}
+
+	&__order-item-delete {
+		width: 104px;
+		color: @color-main;
+		cursor: pointer;
 	}
 }
