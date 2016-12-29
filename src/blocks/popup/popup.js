@@ -20,7 +20,7 @@
 				fixedBgPos: true
 			});
 
-			$('.offer-label').addClass('offer-label--' + productInfo[0].label.type).html(productInfo[0].label.name);
+			$('.product-popup .offer-label').addClass('offer-label--' + productInfo[0].label.type).html(productInfo[0].label.name);
 			$('.product-popup').attr({
 				'data-price':productInfo[0].price,
 				'data-code':productInfo[0].code,
