@@ -11,6 +11,8 @@ var cart = {
 			this.element.fadeIn();
 		} else if (firstProductCard && !$(firstProductCard).isAppearedOnScreen() && this.element.is(':visible')) {
 			this.element.fadeOut();
+		} else if (!firstProductCard) {
+			this.element.fadeIn();
 		}
 	},
 	add: function (event) {
