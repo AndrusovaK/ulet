@@ -1,6 +1,16 @@
 (function(){
 
 	$(function () {
+
+		// Открытие модалки с формой заказа
+		$('.order-link').magnificPopup({
+			type: 'inline',
+			midClick: true,
+			mainClass: 'mfp-fade',
+			removalDelay: 300
+		});
+
+		// Открытие модалка с товаром
 		function openProductModal(event) {
 			var productInfo = products.filter(function (elem) {
 				return elem.code ===  $(event.currentTarget).closest('.product-card').attr('data-code');
