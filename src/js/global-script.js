@@ -40,25 +40,8 @@ function ready(fn) {
 
 // });
 
-var a = [
-  {
-    "code": "101",
-    "title": "Шарик фольгизированный",
-    "label": {
-      "type": "sale",
-      "name": "Акция"
-    },
-    "price": "1299",
-    "imageLink": ""
-  },
-  {
-    "code": "102",
-    "title": "Фольгированные шары \"Звезда\"",
-    "label": {
-      "type": "sale",
-      "name": "Акция"
-    },
-    "price": "1299",
-    "imageLink": ""
-  }
-];
+var products;
+
+$.getJSON('products.json').success(function (data) {
+	products = data;
+});
