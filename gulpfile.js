@@ -134,6 +134,11 @@ gulp.task('copy:css', function(callback) {
   }
 });
 
+gulp.task('copy:json', function () {
+  return gulp.src(dirs.source + '/*.json')
+      .pipe(gulp.dest(dirs.build));
+});
+
 // Копирование и оптимизация изображений
 gulp.task('img', function () {
   console.log('---------- Копирование и оптимизация картинок');
@@ -289,7 +294,7 @@ gulp.task('clean', function () {
 gulp.task('build', gulp.series(
   'clean',
   'svgstore',
-  gulp.parallel('less', 'less:docs', 'copy:css', 'img', 'js', 'js:copy', 'fonts:copy'),
+  gulp.parallel('less', 'less:docs', 'copy:css', 'copy:json', 'img', 'js', 'js:copy', 'fonts:copy'),
   'html'
 ));
 
