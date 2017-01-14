@@ -7,7 +7,8 @@
 -->
 
 <div class="product-card__wrapper">
-	<article class="product-card" data-price="@@price" data-title='@@title' data-code="@@code">
+	<article class="product-card" data-price="@@price" data-title='@@title' data-code="@@code"
+	         data-min-number="@@minOrderNumber" data-max-number="@@maxOrderNumber">
 		<p>
 			<span class="product-card__code">Код @@code</span>
 			<span class="offer-label offer-label--@@label.type">@@label.name</span>
@@ -20,7 +21,7 @@
 		<header class="product-card__header">
 			<h5 class="product-card__title">@@title</h5>
 			<label class="number product-card__number">
-				<input type="text" value="1" class="number__input">
+				<input type="text" value="@@minOrderNumber" class="number__input">
 				<span class="number__minus">-</span>
 				<span class="number__plus">+</span>
 				<span class="number__measure">шт.</span>
@@ -28,7 +29,7 @@
 		</header>
 
 		<div class="product-card__order">
-			<span class="product-card__price">@@price руб</span>
+			<span class="product-card__price"></span>
 			<a href="#" class="btn product-card__btn">Заказать</a>
 		</div>
 	</article>
