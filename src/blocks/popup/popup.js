@@ -22,6 +22,13 @@
 				localStorage.setItem('productCart', JSON.stringify(localStorageCart));
 				li.remove();
 				cart.calculate();
+				calculateCart();
+
+				if(localStorageCart.options.length === 0) {
+					$('.popup__order-details').hide();
+				} else {
+					$('.popup__order-details').show();
+				}
 			}
 		}
 
@@ -78,6 +85,12 @@
 					orderList = $('.popup__order-list').html('');
 
 			localStorageCart = JSON.parse(localStorageCart);
+
+			if(localStorageCart.options.length === 0) {
+				$('.popup__order-details').hide();
+			} else {
+				$('.popup__order-details').show();
+			}
 
 			for(var i = 0; i < localStorageCart.options.length; i++) {
 				var listElement = $(
