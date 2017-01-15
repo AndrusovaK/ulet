@@ -2,7 +2,7 @@
 	$(function () {
 		$(document).on('click', '.number__minus', function () {
 			var $input = $(this).closest('.product-card__number').find('input');
-			var minNumber = Number($(this).closest('.product-card').attr('data-min-number')) || 1;
+			var minNumber = Number($(this).closest('[data-code]').attr('data-min-number')) || 1;
 			var count = parseInt($input.val()) - 1;
 			count = count < minNumber ? minNumber : count;
 			$input.val(count);
@@ -12,7 +12,7 @@
 
 		$(document).on('click', '.number__plus', function () {
 			var $input = $(this).closest('.product-card__number').find('input');
-			var maxNumber = Number($(this).closest('.product-card').attr('data-max-number')) || 10000;
+			var maxNumber = Number($(this).closest('[data-code]').attr('data-max-number')) || 10000;
 			var count = parseInt($input.val()) + 1;
 			count = count > maxNumber ? maxNumber : count;
 			$input.val(count);

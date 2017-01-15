@@ -175,6 +175,10 @@
 
 	&__order-item-number {
 		width: 170px;
+
+		.number {
+			margin: 0;
+		}
 	}
 
 	&__order-item-price {
@@ -185,5 +189,23 @@
 		width: 104px;
 		color: @color-main;
 		cursor: pointer;
+	}
+
+	&__order-sum {
+		text-align: right;
+		border-top: 1px solid #e6e6e6;
+	}
+
+	&__order-sum-title, &__order-sum-value {
+		width: 200px;
+		font-weight: 700;
+	}
+
+	&__order-sum-title {
+		text-align: right;
+	}
+
+	&__order-sum-value {
+		text-align: left;
 	}
 }

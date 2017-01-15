@@ -22,7 +22,9 @@ var cart = {
 			"price": Number(currentProduct.attr('data-price')),
 			"title": currentProduct.attr('data-title'),
 			"number": Number(currentProduct.find('.number__input').val()),
-			"code": currentProduct.attr('data-code')
+			"code": currentProduct.attr('data-code'),
+			"minOrderNumber": Number(currentProduct.attr('data-min-number')),
+			"maxOrderNumber": Number(currentProduct.attr('data-max-number'))
 		};
 
 		var localStorageCart = localStorage.getItem("productCart");
