@@ -2,6 +2,14 @@
 
 	$(function () {
 
+		// Моадльное окно заказа звонка
+		$('.page-header__callback-btn').magnificPopup({
+			type: 'inline',
+			midClick: true,
+			mainClass: 'mfp-fade',
+			removalDelay: 300
+		});
+
 		// Открытие модалки с формой заказа
 
 		function deleteFromCart(e) {
