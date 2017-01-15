@@ -429,6 +429,10 @@ function getComponentsFiles() {
     сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.magnific-popup.js');
   }
 
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.selectric.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.selectric.js');
+  }
+
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/css/global-css.css')) {
@@ -450,6 +454,10 @@ function getComponentsFiles() {
 
   if(fileExistAndHasContent(dirs.source + '/css/magnific-popup.css')) {
     сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/magnific-popup.css');
+  }
+
+  if(fileExistAndHasContent(dirs.source + '/css/selectric.css')) {
+    сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/selectric.css');
   }
 
   if(fileExistAndHasContent(dirs.source + '/css/slick-theme.css')) {

@@ -35,5 +35,10 @@
 				input.addEventListener('change', setPriceRangeOnInput);
 			})
 		}
+
+		var amountSelect = $('.filter__amount-select');
+		if(amountSelect) {
+			amountSelect.selectric();
+		}
 	})
 }());
